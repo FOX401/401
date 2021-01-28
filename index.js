@@ -335,7 +335,7 @@ client.on('group-participants-update', async (anu) => {
             const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
             
             /************** SCURITY FEATURE ************/
-            const isEventon = isGroup ? event.includes(from) : false
+              const isEventon = isGroup ? event.includes(from) : false
             const isRegistered = checkRegisteredUser(sender)
             const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
             const isLevelingOn = isGroup ? _leveling.includes(from) : false
@@ -359,7 +359,7 @@ client.on('group-participants-update', async (anu) => {
 			}
 			const sendImage = (teks) => {
 		    client.sendMessage(from, teks, image, {quoted:mek})
-				    }
+		    }
 		    const costum = (pesan, tipe, target, target2) => {
 			client.sendMessage(from, pesan, tipe, {quoted: { key: { fromMe: false, participant: `${target}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target2}` }}})
 			}
