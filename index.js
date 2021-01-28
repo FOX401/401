@@ -359,7 +359,7 @@ client.on('group-participants-update', async (anu) => {
 			}
 			const sendImage = (teks) => {
 		    client.sendMessage(from, teks, image, {quoted:mek})
-		    }
+				    }
 		    const costum = (pesan, tipe, target, target2) => {
 			client.sendMessage(from, pesan, tipe, {quoted: { key: { fromMe: false, participant: `${target}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target2}` }}})
 			}
